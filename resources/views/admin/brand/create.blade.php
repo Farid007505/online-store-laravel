@@ -65,7 +65,7 @@
         $("#brandForm").submit(function(event) {
             event.preventDefault();
             var element = $(this);
-            $('button[type=submit]').prop('diasbaled', true);
+            $('button[type=submit]').prop('disabaled', true);
             $.ajax({
                 url: '{{ route('brands.store') }}',
                 type: 'post',
@@ -73,9 +73,9 @@
                 dataType: 'json',
                 success: function(response) {
 
-                    $('button[type=submit]').prop('diasbaled', false);
+                    $('button[type=submit]').prop('disabaled', false);
 
-                    if (response['status'] == true) {
+                    if (response['status'] === true) {
                         window.location.href = '{{ route('brands.index') }}';
                         $("#name").removeClass('is-invalid').siblings('p').
                         removeClass('invalid-feedback').html('');

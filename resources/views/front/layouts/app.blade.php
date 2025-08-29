@@ -180,22 +180,19 @@
                 </div>
             </div>
         </div>
-        <div class="copyright-area">
+        {{-- <div class="copyright-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12 mt-3">
                         <div class="copy-right text-center">
-                            <p>© Copyright 2022 Amazing Shop. All Rights Reserved</p>
+                            <p>© Copyright 2025 Ecommerce Shop. All Rights Reserved</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </footer>
     <!-- wishlist modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="wishlistmodal" tabindex="-1" aria-labelledby="exampleModalLabel"

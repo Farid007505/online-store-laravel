@@ -13,11 +13,40 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('admin-assets/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset('admin-assets/css/custom.css') }}">
+    <style>
+        /* Center login box vertically */
+        body.login-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f4f6f9;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .card-header a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .invalid-feedback {
+            display: block;
+        }
+
+        /* Make login button full width */
+        .btn-block {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        <!-- /.login-logo -->
         @include('admin.message')
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
@@ -53,38 +82,22 @@
                         @enderror
                     </div>
 
-                    {{--  <div class="row">
-							<!-- <div class="col-8">
-					  			<div class="icheck-primary">
-									<input type="checkbox" id="remember">
-									<label for="remember">
-						  				Remember Me
-									</label>
-					  			</div>
-							</div> -->  --}}
-                    <!-- /.col -->
-                    <div class="col-4">
+                    <div class="mb-3">
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
                     </div>
-                    <!-- /.col -->
+                </form>
+
+                {{-- <p class="mb-1 mt-3 text-center">
+                    <a href="{{ route('front.forgotPassword') }}">I forgot my password</a>
+                </p> --}}
             </div>
-            </form>
-            <p class="mb-1 mt-3">
-                <a href="{{ route('front.forgotPassword') }}">I forgot my password</a>
-            </p>
         </div>
-        <!-- /.card-body -->
     </div>
-    <!-- /.card -->
-    </div>
-    <!-- ./wrapper -->
-    <!-- jQuery -->
+
+    <!-- Scripts -->
     <script src="{{ asset('admin-assets/plugins/jquery/jquery.min.js') }}"></script>
-    <!-- Bootstrap 4 -->
     <script src="{{ asset('admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- AdminLTE App -->
     <script src="{{ asset('admin-assets/js/adminlte.min.js') }}"></script>
-    <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('admin-assets/js/demo.js') }}"></script>
 </body>
 
